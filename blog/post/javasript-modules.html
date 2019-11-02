@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../../css/main.css">
-    <title>Rabblry | JavaScript Modules - Enough to Get You Started</title>
+    <title>MyBlog | JavaScript Modules - Enough to Get You Started</title>
 </head>
 <body class="grey lighten-5">
     <!-- Navbar -->
@@ -17,7 +17,7 @@
         <div class="nav-wrapper">
             <div class="container">
                 <a href="../../index.html" class="brand-logo">
-                    <span class="white-text"><code>{ Rabblry }</code></span>
+                    <span class="white-text"><code>{ MyBlog }</code></span>
                 </a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="#" class="dropdown-trigger" data-target="dropdown-menu"><strong>Blog Categories</strong></a></li>
@@ -57,22 +57,19 @@
                 <div class="col s12">
                     <h3 class="teal-text text-lighten-2">What Are They?</h3>
                     <p class="flow-text">
-                        <p>
-                            This is a little bit of a tricky question, because JavaScript modules can be a lot of things. Fortunately, this doesn't mean that they're tricky themselves. This nonspecificity actually adds a lot of valuable functionality to them.
-                        </p> 
-                        <p>
-                            If you've ever used Node.js before, then you almost certainly know what I'm referring to when I mention "require" statements. They're used to transfer packages and files as well as bits of code from pre-existing files across your web applications. Say you have an object in one file whose values you want to access in another file. You can require the object's file and then extract the object by destructuring it. For more information on destructuring, check out my post about it <a href="#">here</a>.
-                        </p>
-                        <p>
-                            In addition to Node's "require" statements, there are also a number of JS libraries that allow you to do the same thing, such as RequireJS. But don't you wish you could just do this with "vanilla" JS and not have to use Node or bring in a third party library? Well, now you can.
-                        </p>
+                        This is a little bit of a tricky question, because JavaScript modules can be a lot of things. Fortunately, this doesn't mean that they're tricky themselves. This nonspecificity actually adds a lot of valuable functionality to them.<br><br>
+
+                        If you've ever used Node.js before, then you almost certainly know what I'm referring to when I mention "require" statements. They're used to transfer packages and files as well as bits of code from pre-existing files across your web applications. Say you have an object in one file whose values you want to access in another file. You can require the object's file and then extract the object by destructuring it. For more information on destructuring, check out my post about it <a href="#">here</a>.<br><br>
+
+                        In addition to Node's "require" statements, there are also a number of JS libraries that allow you to do the same thing, such as RequireJS. But don't you wish you could just do this with "vanilla" JS and not have to use Node or bring in a third party library? Well, now you can.<br><br>
                     </p>
                     <h3 class="teal-text text-lighten-2">Transferring Code Between Files</h3>
                     <p class="flow-text">
-                        <p>
-                            With modules now enjoying near universal acceptance among browsers, you can achieve many of the same things with vanilla JS that you could with Node or one of the libraries. Let's take a look at an example:
-                        </p>
-                        <p class="center-align"><strong>Exporting Code</strong></p>
+                        With modules now enjoying near universal acceptance among browsers, you can achieve many of the same things with vanilla JS that you could with Node or one of the libraries. Let's take a look at an example:<br>
+
+                        <h5 class="center-align">
+                            <strong>Exporting Code</strong>
+                        </h5><br>
                         <div class="code">
                             <code>
                                 export function Person(name, age, email) = {
@@ -84,7 +81,7 @@
                                 export let jason = new Person('Jason', 28, 'jason@test.com');
                             </code>
                         </div>
-                        <p>
+                        <p class="flow-text">
                             In the code above, the person constructor and the "jason" object are being exported separately. However, we can use shorthand to export both at the same time, like so:
                         </p>
                         <div class="code">
@@ -92,34 +89,39 @@
                                 export { Person, jason };
                             </code>
                         </div>
-                        <p>
+                        <p class="flow-text">
                             Essentially, you can export anything with a name. Once the code is exported from a JS file, it needs to be imported into whichever file will use it. Check out the code below:
                         </p>
-                        <p class="center-align"><strong>Importing Code</strong></p>
+                        <h5 class="center-align">
+                            <strong>Importing Code</strong>
+                        </h5><br>
                         <div class="code">
                             <code>
                                 import { Person, jason } from 'file path';
                             </code>
                         </div>
-                        <p>
+                        <p class="flow-text">
                             Obviously, replace "file path" with the file path to the file from which it's being exported. 
                         </p>
                     </p>
                     <h3 class="teal-text text-lighten-2">Making It Work</h3>
                     <p class="flow-text">
-                        <p>
+                        <p class="flow-text">
                             There's one last thing that needs to be done before the modules can be used. The file type of the JS files needs to be changed. The file extension must be changed from .js to .mjs (modular JS). So, let's say the files using modules were index.js and person.js. Those now need to be index.mjs and person.mjs. The script tags must also change. The new script tags should look like:
                         </p>
+                        <h5 class="center-align">
+                            <strong>Module Script Tags</strong>
+                        </h5><br>
                         <div class="code">
                             <code>
                                 script type="module" src="index.mjs" /script<br>
                                 script type="module" src="person.mjs" /script
                             </code>
                         </div>
-                        <p>
+                        <p class="flow-text">
                             Hopefully now, you can see how useful JS modules are and begin implementing them into your own code when using Node or a third party library seems like overkill.
                         </p>
-                        <p>
+                        <p class="flow-text">
                             To go more in depth about the subject, visit MDN's <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">page</a> on modules.
                         </p>
                     </p>
@@ -131,7 +133,7 @@
     <ul class="collapsible">
         <li>
             <div class="collapsible-header">
-                <i class="material-icons">email</i><span>Contact</span>
+                <i class="material-icons">email</i><span>Contact Us</span>
             </div>
             <div class="collapsible-body">
                 <div class="row">
@@ -162,13 +164,17 @@
         </li>
     </ul>
     <!-- Footer -->
-    <footer class="teal lighten-2">
-        <div>
-            <p id="copyright">&copy; <span id="year">2019</span> Rabblry</p>
+    <footer class="teal lighten-2 center-align">
+        <div id="copyright-legal">
+            <p id="copyright">&copy; <span id="year"></span> MyBlog</p>
+            <div id="legal">
+                <a href="#">Privacy Policy </a>|
+                <a href="#">Terms & Conditions </a>|
+                <a href="https://materializecss.com"><span>Materialize</span></a>
+            </div>
         </div>
-        <div id="legal">
-            <a href="#"><p id="privacy">Privacy Policy</p></a>
-            <a href="#"><p id="terms">Terms & Conditions</p></a>
+        <div id="attribution">
+            <small>Blog photograph courtesy of <a href="https://unsplash.com/@dustinlee" class="white-text">Dustin Lee</a></small>
         </div>
     </footer>
     <!-- Scripts -->
