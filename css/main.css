@@ -1,0 +1,95 @@
+/* Site Description */
+nav {
+    margin-bottom: 0;
+}
+
+#site-description {
+    margin: 0;
+    background-color: #ff944d;
+}
+
+#site-description p {
+    margin-top: 0;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Cards */
+.card-action {
+    font-weight: 500;
+}
+
+/* Blog Body */
+div.code p {
+    font-weight: 500;
+}
+
+div.code {
+    display: flex;
+    justify-content: center;
+    background-color: #b8b894;
+    border: none;
+    border-radius: 10px;
+}
+
+div.code code {
+    padding: 2rem;
+}
+
+/* Collapsible */
+.collapsible {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collapsible-header span {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.collapsible-header i {
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 500;
+}
+
+footer div {
+    width: 50%;
+    
+}
+
+footer #copyright {
+    font-size: 1.3rem;
+}
+
+footer #privacy {
+    margin-bottom: 0.5rem;
+}
+
+footer #terms {
+    margin-top: 0;
+}
+
+footer div a {
+    color: #fff;
+    transition: 0.2s;
+}
+
+footer div a:hover {
+    color: #e6e6e6;
+}
